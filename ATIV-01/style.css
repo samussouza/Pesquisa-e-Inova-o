@@ -1,7 +1,6 @@
-body {
+body{
     margin: 0;
 }
-
 .card {
     width: 500px;
     height: fit-content;
@@ -11,25 +10,22 @@ body {
     margin: 10px;
 }
 
-.imagem {
+.card-image {
     width: 100px;
     border-radius: 50%;
 }
-
-.imagem img {
+.card-image img{
     width: 70%;
     height: 70%;
 }
-
-.titulo {
-    font-size: 35px
+.card-titulo{
+    font-size: 35px;
 }
-
-.nomeA {
-    color: rgb(152, 18, 112);
+.card-titulo .card-titulo-nome{
+    color: rgb(0, 47, 255);
 }
-
-.mensagem {
-    color: rgb(99, 13, 98);
+.card-mensagem span{
+    font-weight: bold;
+    color: #dd0f0f;
     font-style: italic;
 }
