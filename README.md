@@ -1,2 +1,3 @@
-# Pesquisa-e-Inova-o
+# Pesquisa-e-Inovação
+
 Destinado para entregas de atividades acadêmicas.
