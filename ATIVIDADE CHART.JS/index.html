@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade chart js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body style="font-family: Arial, sans-serif;
+
+background-color: #F0F9FF">
+    
+ <section style="background-color: white; width: 95%; margin-left: 40px; margin-top: 40px; min-height: 610px; border-radius: 5px;">
+    <br>
+<div style="padding: 10px 20px; font-weight: bold; font-size: 38px; background-color: rgba(0, 0, 0, 0.5); margin: 10px; border-radius: 5px; color: #F0F9FF; display: flex; align-items: center;">
+    
+    <span style="margin-top: 7px;"> <img width="48" height="48" src="https://img.icons8.com/fluency/48/control-panel.png" alt="control-panel"/> </span>
+   <span style="margin-left: 5px;">Dashboard</span>
+ </div>
+ <br>
+        <span style="margin-left: 27px;font-size: 16px;">Média mensal:
+            <span style="margin-left: 599px;">Níveis diários:</span> 
+        </span>
+        <br>  
+      
+        <section style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; padding-top: 5px;">
+        
+        <div style="width: 660px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); padding: 10px; ">
+            <canvas id="myChart"></canvas>
+        </div>
+        
+        <div style="width: 660px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); padding: 10px;">
+            <canvas id="myChart2"></canvas>
+        </div>
+    </section>
+</section>
+
+</body>
+
+</html>
+
+<script>
+    const ctx = document.getElementById('myChart');
+    const ctx2 = document.getElementById('myChart2');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+                label: 'Temperatura média',
+                data: [22, 24, 27, 23, 20, 18],
+                borderWidth: 1
+            
+            },
+            {
+                label: 'Umidade média',
+                data: [80, 82, 80, 85, 80, 83],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [{
+                label: 'Temperatura',
+                data: [30, 29, 28, 25, 22, 23],
+                borderWidth: 1,
+                borderColor: "#FF4500",
+                backgroundColor: "#FF4500"
+            },
+            {
+                label: 'Umidade',
+                data: [80, 82, 80, 85, 80, 83],
+                borderWidth: 1,
+                borderColor: '#FF8C00',
+                backgroundColor: '#FF8C00'
+
+            }]
+
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+</script>
